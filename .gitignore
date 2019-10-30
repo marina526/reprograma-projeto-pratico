@@ -1,1 +1,2 @@
+# ignora a pasta node_modules quando da um commit
 node_modules

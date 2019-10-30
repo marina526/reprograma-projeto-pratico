@@ -2,9 +2,9 @@ const express = require("express")
 const app = express()
 
 //rotas
-const index = require("./routes/index")
+const index = require("./routes/index") //index chama essa rota
 
-app.use(function (req, res, next) {
+app.use(function (req, res, next) { // mostra que é publica
     res.header("Access-Control-Allow-Origin", "*")
     res.header(
         "Access-Control-Allow-Headers",
@@ -13,6 +13,6 @@ app.use(function (req, res, next) {
     next()
 })
 
-app.use("/", index)
+app.use("/", index) //chama o index que la em cima chama outra rota
 
-module.exports = app
+module.exports = app //para todos os app terem acesso
