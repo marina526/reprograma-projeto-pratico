@@ -7,5 +7,9 @@ exports.getId = (req, res) => {
 }
 exports.get = (req, res) => {
     res.status(200).send(listaTarefas)
-
+}
+exports.getConcluido = (req, res) => {
+    const concluido = req.params.Concluido
+    const tarefaConcluida = listaTarefas.filter(listaTarefas => listaTarefas.concluido == "true")
+    res.status(200).send(tarefaConcluida)
 }
