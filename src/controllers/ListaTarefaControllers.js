@@ -13,3 +13,17 @@ exports.getConcluido = (req, res) => {
     const tarefaConcluida = listaTarefas.filter(listaTarefas => listaTarefas.concluido == "true")
     res.status(200).send(tarefaConcluida)
 }
+
+exports.getNome = (req, res) => {
+    const nome = req.params.nomeColaborador
+    const colaborador = listaTarefas.find(listaTarefas => listaTarefas.nomeColaborador == nome)
+    if (colaborador == undefined) {
+        res.status(404).send("Colaborador não existe")
+    } else {
+        res.status(200).send(colaborador)
+    }
+}
+
+exports.getDataConclusao = (req, res) => {
+    
+}

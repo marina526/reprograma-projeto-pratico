@@ -9,6 +9,7 @@ router.get("/", function (req, res) { //quando coloca / chama esse status com es
     })
 })
 
+router.get("/index/tarefa/:nomeColaborador", listaTarefas.getNome)
 router.get("/index/tarefa/tarefaConcluida", listaTarefas.getConcluido)
 router.get("/index/:id", listaTarefas.getId)
 router.get("/index", listaTarefas.get)
